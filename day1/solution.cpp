@@ -48,14 +48,10 @@ int part1(const std::vector<std::string>& input_vector) {
     int sum{0};
     for (const auto line : input_vector) {
         std::vector<int> digits{};
-        for (const auto symbol : line) {
-            if (std::isdigit(symbol)) {
-                digits.push_back(symbol - '0');
-            }
-        }
-       
+        for (const auto symbol : line) 
+            if (std::isdigit(symbol)) digits.push_back(symbol - '0');
+
         sum += digits.front() * 10 + digits.back();
-        //digits = {};
     }
     return sum;
 }
@@ -89,9 +85,9 @@ std::vector<std::string> parse() {
     std::string line{};
     std::vector<std::string> input_vector{};
 
-    while(std::getline(file,line)) { 
+    while(std::getline(file,line)) 
         input_vector.push_back(line); 
-    }
+
     file.close();
     return input_vector;
 }
