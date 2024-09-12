@@ -4,7 +4,6 @@
 #include <fstream>
 #include <algorithm>
 #include <cmath>
-#include <array>
 #include <numeric>
 
 struct Card
